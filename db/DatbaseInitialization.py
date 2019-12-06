@@ -37,3 +37,14 @@ class Order(Base):
     date_placed = Column(DateTime(), default=datetime.now)
     line_items = relationship("OrderLine", backref='order')
 
+class OrderLine(Base):
+    __tablename__ = 'order_lines'
+    id = Column(Integer(), primary_key=True)
+    order_id = Column(Integer(), ForeignKey('orders.id'))
+    item_id = Column(Integer(), ForeignKey('items.id'))
+    quantity = Column(SmallInteger())
+
+
+
+Base.metadata.create_all(engine)
+
