@@ -84,3 +84,7 @@ session.commit()
 o3 = Create.Order(customer=c1)
 orderline1 = Create.OrderLine(order=o1,item=i1, quantity=5)
 orderline2 = Create.OrderLine(order=o1,item=i2, quantity=10)
+
+session.add_all([o3])
+
+session.commit()
