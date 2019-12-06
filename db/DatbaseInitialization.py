@@ -30,3 +30,10 @@ class Item(Base):
     quantity = Column(Integer(), nullable=False)
     orders = relationship("OrderLine", backref='item')
 
+class Order(Base):
+    __tablename__ = 'orders'
+    id = Column(Integer(), primary_key=True)
+    customer_id = Column(Integer(), ForeignKey('customers.id'))
+    date_placed = Column(DateTime(), default=datetime.now)
+    line_items = relationship("OrderLine", backref='order')
+
