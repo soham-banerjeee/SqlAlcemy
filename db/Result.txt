@@ -1,0 +1,109 @@
+/usr/local/lib/python3.7/site-packages/sqlalchemy/sql/sqltypes.py:666: SAWarning: Dialect sqlite+pysqlite does *not* support Decimal objects natively, and SQLAlchemy must convert from floating point - rounding errors and other issues may occur. Please consider storing Decimal numbers as strings or integers on this platform for lossless storage.
+  "storage." % (dialect.name, dialect.driver)
+Name:  Toby   Miller  Address: 1662 Kinney Street  Email: tmiller@example.com
+Name:  Scott   Harvey  Address: 424 Patterson Street  Email: scottharvey@example.com
+Name:  John   Lara  Address: 3073 Derek Drive  Email: johnlara@mail.com
+Name:  Sarah   Tomlin  Address: 3572 Poplar Avenue  Email: sarahtomlin@mail.com
+Name:  Toby   Miller  Address: 1662 Kinney Street  Email: tmiller@example.com
+Name:  Scott   Harvey  Address: 424 Patterson Street  Email: scottharvey@example.com
+Name:  Chair  Cost Price: 9.21  Selling Price: 10.81  Quantity: 5
+Name:  Pen  Cost Price: 3.45  Selling Price: 4.51  Quantity: 3
+Name:  Headphone  Cost Price: 15.52  Selling Price: 16.81  Quantity: 50
+Name:  Travel Bag  Cost Price: 20.10  Selling Price: 24.21  Quantity: 50
+Name:  Keyboard  Cost Price: 20.10  Selling Price: 22.11  Quantity: 50
+Name:  Monitor  Cost Price: 200.14  Selling Price: 212.89  Quantity: 50
+Name:  Watch  Cost Price: 100.58  Selling Price: 104.41  Quantity: 50
+Name:  Water Bottle  Cost Price: 20.89  Selling Price: 25.00  Quantity: 50
+ID:  1  Date Placed: 2019-12-06 02:40:26.270458  Customer Id: 1
+ID:  2  Date Placed: 2019-12-06 02:40:26.270838  Customer Id: 1
+ID:  3  Date Placed: 2019-12-06 02:40:26.284263  Customer Id: 1
+SELECT customers.id AS customers_id, customers.first_name AS customers_first_name, customers.last_name AS customers_last_name, customers.username AS customers_username, customers.email AS customers_email, customers.address AS customers_address, customers.town AS customers_town, customers.created_on AS customers_created_on, customers.updated_on AS customers_updated_on
+FROM customers
+6
+8
+3
+Name:  Toby   Miller  Address: 1662 Kinney Street  Email: tmiller@example.com
+Name:  Chair  Cost Price: 9.21  Selling Price: 10.81  Quantity: 5
+ID:  1  Date Placed: 2019-12-06 02:40:26.270458  Customer Id: 1
+Name:  Toby   Miller  Address: 1662 Kinney Street  Email: tmiller@example.com
+Name:  Chair  Cost Price: 9.21  Selling Price: 10.81  Quantity: 5
+None
+All customers with name starting with John:
+Name:  John   Lara  Address: 3073 Derek Drive  Email: johnlara@mail.com
+All customers with id less than or equal to 5 and living in Norfolk town:
+Name:  John   Lara  Address: 3073 Derek Drive  Email: johnlara@mail.com
+Name:  Sarah   Tomlin  Address: 3572 Poplar Avenue  Email: sarahtomlin@mail.com
+find all customers who either live in Peterbrugh or Norfolk
+Name:  John   Lara  Address: 3073 Derek Drive  Email: johnlara@mail.com
+Name:  Sarah   Tomlin  Address: 3572 Poplar Avenue  Email: sarahtomlin@mail.com
+find all customers whose first name is John and live in Norfolk
+Name:  John   Lara  Address: 3073 Derek Drive  Email: johnlara@mail.com
+find all johns who don't live in Peterbrugh
+Name:  John   Lara  Address: 3073 Derek Drive  Email: johnlara@mail.com
+
+All Orders with Date Shipped as None
+All Orders with Date Shipped Not as None
+ID:  1  Date Placed: 2019-12-06 02:40:26.270458  Customer Id: 1
+ID:  2  Date Placed: 2019-12-06 02:40:26.270838  Customer Id: 1
+ID:  3  Date Placed: 2019-12-06 02:40:26.284263  Customer Id: 1
+All Customers whose name start with Toby or Sarah:
+Name:  Toby   Miller  Address: 1662 Kinney Street  Email: tmiller@example.com
+Name:  Sarah   Tomlin  Address: 3572 Poplar Avenue  Email: sarahtomlin@mail.com
+Name:  Toby   Miller  Address: 1662 Kinney Street  Email: tmiller@example.com
+All Customers whose name does not start with Toby or Sarah:
+Name:  Toby   Miller  Address: 1662 Kinney Street  Email: tmiller@example.com
+Name:  Sarah   Tomlin  Address: 3572 Poplar Avenue  Email: sarahtomlin@mail.com
+Name:  Toby   Miller  Address: 1662 Kinney Street  Email: tmiller@example.com
+All Items whose cost price is between 10 and 50:
+Name:  Headphone  Cost Price: 15.52  Selling Price: 16.81  Quantity: 50
+Name:  Travel Bag  Cost Price: 20.10  Selling Price: 24.21  Quantity: 50
+Name:  Keyboard  Cost Price: 20.10  Selling Price: 22.11  Quantity: 50
+Name:  Water Bottle  Cost Price: 20.89  Selling Price: 25.00  Quantity: 50
+All Items whose cost price is not between 10 and 50:
+Name:  Headphone  Cost Price: 15.52  Selling Price: 16.81  Quantity: 50
+Name:  Travel Bag  Cost Price: 20.10  Selling Price: 24.21  Quantity: 50
+Name:  Keyboard  Cost Price: 20.10  Selling Price: 22.11  Quantity: 50
+Name:  Water Bottle  Cost Price: 20.89  Selling Price: 25.00  Quantity: 50
+All Items whose name ends with r:
+Name:  Chair  Cost Price: 9.21  Selling Price: 10.81  Quantity: 5
+Name:  Monitor  Cost Price: 200.14  Selling Price: 212.89  Quantity: 50
+All Items whose name starts with w:
+Name:  Watch  Cost Price: 100.58  Selling Price: 104.41  Quantity: 50
+Name:  Water Bottle  Cost Price: 20.89  Selling Price: 25.00  Quantity: 50
+Printing all customers but limiting to 2:
+Name:  Toby   Miller  Address: 1662 Kinney Street  Email: tmiller@example.com
+Name:  Scott   Harvey  Address: 424 Patterson Street  Email: scottharvey@example.com
+Printing all customers but limiting to 2 and offsetting to 2:
+Name:  John   Lara  Address: 3073 Derek Drive  Email: johnlara@mail.com
+Name:  Sarah   Tomlin  Address: 3572 Poplar Avenue  Email: sarahtomlin@mail.com
+Printing all items that start with wa and then it is sorted by the cost price in descending order:
+Name:  Watch  Cost Price: 100.58  Selling Price: 104.41  Quantity: 50
+Name:  Water Bottle  Cost Price: 20.89  Selling Price: 25.00  Quantity: 50
+Join between Customer and Order:
+ Order placed on: 2019-12-06 02:40:26.270458
+ Order placed on: 2019-12-06 02:40:26.270838
+ Order placed on: 2019-12-06 02:40:26.284263
+Outer Join between Customer and Order:
+ Order placed by: Toby  with Order ID: 1
+ Order placed by: Toby  with Order ID: 2
+ Order placed by: Toby  with Order ID: 3
+ Order placed by: Scott  with Order ID: None
+ Order placed by: John  with Order ID: None
+ Order placed by: Sarah  with Order ID: None
+ Order placed by: Toby  with Order ID: None
+ Order placed by: Scott  with Order ID: None
+Wolfden
+Beckinsdale
+Norfolk
+(2, 'Pen')
+(3, 'Headphone')
+(4, 'Travel Bag')
+(5, 'Keyboard')
+(7, 'Watch')
+(8, 'Water Bottle')
+Monitor
+Orders Status:
+Orders Status For Order ID 1:
+Transaction completed.
+Orders Status For Order ID 2:
+Transaction completed.
