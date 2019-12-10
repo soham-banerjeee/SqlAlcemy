@@ -5,4 +5,6 @@ In this branch, you need to follow this tutorial: https://overiq.com/sqlalchemy-
 
 This tutorial required me to follow previous hands on tutorials to get sqlAlchemy to work with sqlite instead 
 of the Postgres connection used with the project.
+## Contributor
+## Soham Banerjee sb2344
 
